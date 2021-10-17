@@ -1,0 +1,73 @@
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("../assets/Fontspring-DEMO-blue_vinyl_bold_ps_ot.otf");
+}
+.main-layout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7vh;
+  padding-bottom: 3.5vh;
+  text-align: center;
+  width: 100%;
+}
+h1{
+  font-family: 'CustomFont', Arial, sans-serif !important;
+}
+.nav-bar {
+  z-index: 2;
+  width: 100%;
+  position: fixed;
+  height: 7vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  background-color: white;
+  border-bottom: 1px solid #cecece;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-float infinite 3s ease-in-out;
+  }
+}
+.App-link {
+  color: rgb(112, 76, 182);
+}
+.gray-text{
+  color: #cecece;
+  text-decoration: none;
+  text-align: left;
+}
+.text-layout{
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  text-align: start;
+}
+span{
+  text-align: left;
+}
+.comment-text{
+  text-align: initial;
+}
+@keyframes App-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.post-image{
+  max-height: 800px;
+}

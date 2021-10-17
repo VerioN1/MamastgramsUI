@@ -1,21 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './style/index.css';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
-import * as serviceWorker from './serviceWorker';
+import 'semantic-ui-css/semantic.min.css'
+import AppWrapper from './AppWrapper';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import ToastProvider from './app/components/Toast/ToastProvider';
+
+const queryClient = new QueryClient()
 
 ReactDOM.render(
   <React.StrictMode>
+         <QueryClientProvider client={queryClient}>
     <Provider store={store}>
-      <App />
+      <ToastProvider/>
+      <AppWrapper />
     </Provider>
+</QueryClientProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
